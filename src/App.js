@@ -1,13 +1,14 @@
 import React, { Suspense } from 'react';
 import './App.scss';
 
+import { Canvas, useFrame } from 'react-three-fiber';
+
 import { Html, useGLTFLoader } from 'drei';
 
-import { Canvas } from 'react-three-fiber';
-
 import Header from './components/Header';
-
 import { Section } from './components/section';
+
+import { Lights } from './components/Lights';
 
 const Model = () => {
   const gltf = useGLTFLoader('/armchairYellow.gltf', true);
@@ -15,10 +16,14 @@ const Model = () => {
 };
 
 const HTMLContent = () => {
+  const ref = React.useRef();
+
+  useFrame(() => (ref.current.rotation.y += 0.01));
+
   return (
     <Section factor={1.5} offset={1}>
       <group position={[0, 250, 0]}>
-        <mesh position={[0, 35, 0]}>
+        <mesh ref={ref} position={[0, -35, 0]}>
           <Model />
         </mesh>
         <Html fullscreen>
@@ -36,6 +41,7 @@ function App() {
     <>
       <Header />
       <Canvas colorManagement camera={{ position: [0, 0, 120], fov: 70 }}>
+        <Lights />
         <Suspense fallback={null}>
           <HTMLContent />
         </Suspense>
