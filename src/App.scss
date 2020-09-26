@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f15946;
+  background: #000111;
   transition: 0.4s ease-in-out;
 }
 
@@ -29,6 +29,7 @@ body,
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  overflow-x: hidden !important;
 }
 
 .container {
@@ -45,7 +46,7 @@ header {
   position: absolute;
   z-index: 99;
   width: 100%;
-  padding: 60px;
+  padding: 65px;
   .header-inner {
     display: flex;
     align-items: center;
@@ -65,9 +66,9 @@ header {
           margin: 0 60px;
           &.btn {
             a {
-              color: #fff;
+              color: #000111;
               font-weight: 600;
-              background: #23232a;
+              background: #FFF;
               padding: 16px 24px;
               border-radius: 10px;
             }
@@ -94,6 +95,24 @@ header {
   }
   @media (max-width: 1440px) {
     font-size: 6rem;
+  }
+}
+
+.art {
+  color: #bfd8c5;
+}
+
+.about {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  margin: 120px auto;
+  color: #000111;
+  span {
+    display: block;
+  }
+  @media (max-width: 1440px) {
+    font-size: 1.5rem;
   }
 }
 

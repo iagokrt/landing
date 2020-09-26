@@ -1,5 +1,7 @@
 import React from "react";
 
+import MusicPlayer from './MusicPlayer';
+
 export default function Header() {
   return (
     <header>
@@ -7,17 +9,14 @@ export default function Header() {
         <div className='logo'>@iagokrt.</div>
         <nav>
           <ul>
-            <li>
-              <a href='/'>Projects</a>
+            <li className='btn'>
+              <a href='https://github.com/iagokrt'>Projects</a>
             </li>
             <li>
               <a href='/'>Blog</a>
             </li>
             <li>
-              <a href='/'>Socials</a>
-            </li>
-            <li className='btn'>
-              <a href='/'>write</a>
+              <MusicPlayer url="/demo.mp3" />
             </li>
           </ul>
         </nav>
