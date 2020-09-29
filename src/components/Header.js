@@ -6,14 +6,14 @@ export default function Header() {
   return (
     <header>
       <div className='header-inner'>
-        <div className='logo'>@iagokrt.</div>
+        <div className='logo'>@iagokrt. <p className="coffee"><strong>❤ coffee n' creativity ❤</strong></p></div>
         <nav>
           <ul>
             <li className='btn'>
-              <a href='https://github.com/iagokrt'>Projects</a>
+              <a target="_blank" rel="noopener noreferrer" href='https://github.com/iagokrt'>Projects</a>
             </li>
             <li>
-              <a href='/'>Blog</a>
+              <a target="_blank" rel="noopener noreferrer" href='https://writeisland.netlify.app/'>Blog</a>
             </li>
             <li>
               <MusicPlayer url="/demo.mp3" />

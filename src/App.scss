@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000111;
+  background: #919eed;
   transition: 0.4s ease-in-out;
 }
 
@@ -38,8 +38,43 @@ body,
   max-width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.coffee {
+  padding: 3px;
+  
+  font-size: 10px;
+}
+.credits {
+  text-align: center;
+}
+
+.personal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.profile {
+  color: #f1f1f1;
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+img {
+  position: relative;
+  z-index: 99;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  margin-left: 8px;
+  padding: 10px;
 }
 
 header {
@@ -138,4 +173,38 @@ header {
 .loading-bar {
   height: 32px;
   background: #f15946;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.socials p {
+  margin-right: 8px;
+  margin-left: 8px;
+  font-size: 22px;
+}
+
+.socials p a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.socials p a svg {
+  margin-right: 4px;
+}
+
+div.personal aside {
+  background-color: rgba(255, 255, 255,  .2);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+div.personal aside p {
+  color: #000;
 }

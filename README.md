@@ -1,3 +1,3 @@
 # Artistic Development
 
-## R3F portfolio page + techBlog
+## R3F portfolio page
