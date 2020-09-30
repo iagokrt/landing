@@ -3,7 +3,7 @@ import React from 'react'
 export function Stack() {
   return (
     <aside>
-      <p><strong>My stack is mainly focused on JavaScript modules and libraries:</strong></p>
+      <p className="description" ><strong>My stack is mainly focused on JavaScript modules and libraries:</strong></p>
       <ul className="tech-list">
         <li>HTML/CSS/SCSS/JavaScript ES6</li>
         <li>WebGL/GLSL & Threejs</li>
