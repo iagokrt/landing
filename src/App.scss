@@ -10,6 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #919eed;
   transition: 0.4s ease-in-out;
+
 }
 
 html,
@@ -52,6 +53,16 @@ body,
   text-align: center;
 }
 
+.blog-button {
+  background: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  color: black;
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 3px #000;
+  text-decoration: none;
+}
+
 .personal {
   display: flex;
   flex-direction: row;
@@ -59,6 +70,10 @@ body,
   justify-content: space-between;
   padding-left: 12px;
   padding-right: 12px;
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .profile {
@@ -131,10 +146,31 @@ header {
   @media (max-width: 1440px) {
     font-size: 6rem;
   }
+  @media (max-width: 530px) {
+    font-size: 3.5rem;
+  }
 }
 
-.art {
-  color: #bfd8c5;
+.title-about {
+  color: #f1f1f1;
+}
+
+.title-tech {
+  color: teal;
+  font-size: 5rem;
+}
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  list-style: hebrew;
+  margin-top: 25px; 
+  li {
+    padding: 4px;
+    font-size: 1rem;
+  }
 }
 
 .about {
@@ -201,10 +237,16 @@ header {
 
 div.personal aside {
   background-color: rgba(255, 255, 255,  .2);
+  box-shadow: 1px 1px 3px #222;
   border-radius: 4px;
   padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-div.personal aside p {
-  color: #000;
+div.personal aside p.profile {
+  color: #fff;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }

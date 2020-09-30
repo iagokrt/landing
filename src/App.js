@@ -5,6 +5,7 @@ import { Canvas } from 'react-three-fiber';
 
 import Header from './components/Header';
 import Personal from './components/Personal';
+import { Stack } from './components/Personal/Stack';
 import { Copyright } from './components/Personal/Copyright';
 
 import state from './components/state';
@@ -28,8 +29,9 @@ function App() {
             domContent={domContent} 
             modelPath={"/lamp.gltf"}
             positionY={250}
-            bgColor={'#152583'}
+            bgColor={'#0A1241'}
             rotateVelocity={0.002}
+            meshX={0}
             meshY={-20}
             meshScale={[12,12,12]}
           >
@@ -37,26 +39,41 @@ function App() {
           </HTMLContent>
           <HTMLContent 
             domContent={domContent} 
-            modelPath="/sphere.gltf" 
+            modelPath="/rose.gltf" 
             positionY={0}
-            bgColor={'#4F64E2'}
-            rotateVelocity={-0.015}
-            meshY={85}
-            meshScale={[4, 4, 4]}
+            bgColor={'#152583'}
+            rotateVelocity={-0.005}
+            meshX={20}
+            meshY={-85}
+            meshScale={[0.1, 0.1, 0.1]}
           > 
-              <h1 className="title art">About me</h1>
+              <h1 className="title title-about">About me</h1>
               <Personal />
           </HTMLContent>
           <HTMLContent 
           domContent={domContent} 
-          modelPath="/teacup.gltf" 
-          positionY={-300}
-          bgColor={'#7D92E9'}
-          rotateVelocity={0.005}
-          meshY={-35}
-          meshScale={[10, 10, 10]}
+          modelPath="/sphere.gltf" 
+          positionY={-250}
+          bgColor={'#0A1241'}
+          rotateVelocity={0.002}
+          meshX={0}
+          meshY={-20}
+          meshScale={[15, 15, 15]}
         > 
-            <h1 className="title art">art is a buum</h1>
+            <h1 className="title title-tech">Technologies</h1>
+            <Stack />
+        </HTMLContent>
+          <HTMLContent 
+          domContent={domContent} 
+          modelPath="/teacup.gltf" 
+          positionY={-550}
+          bgColor={'#7D92E9'}
+          rotateVelocity={0.002}
+          meshX={110}   
+          meshY={-50}
+          meshScale={[4.5, 4.5, 4.5]}
+        > 
+            <h1 className="title">art is a buum</h1>
             <Copyright />
         </HTMLContent>
         </Suspense>

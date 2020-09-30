@@ -13,7 +13,7 @@ const Model = ({ modelPath }) => {
   return <primitive object={gltf.scene} dispose={null} />;
 };
 
-export const HTMLContent = ({domContent, bgColor, children, modelPath, positionY, rotateVelocity, meshY, meshScale }) => {
+export const HTMLContent = ({domContent, bgColor, children, modelPath, positionY, rotateVelocity, meshY, meshX, meshScale }) => {
   const ref = useRef();
   useFrame(() => (ref.current.rotation.y += rotateVelocity));
 
@@ -28,7 +28,7 @@ export const HTMLContent = ({domContent, bgColor, children, modelPath, positionY
   return (
     <Section factor={1.5} offset={1}>
       <group position={[0, positionY, 0]}>
-        <mesh ref={ref} position={[0, meshY, 0]} scale={meshScale}>
+        <mesh ref={ref} position={[meshX, meshY, 0]} scale={meshScale}>
           <Model modelPath={modelPath} />
         </mesh>
         <Html portal={domContent} fullscreen>
