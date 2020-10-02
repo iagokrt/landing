@@ -2,6 +2,8 @@ import React, { useRef, useEffect, Suspense } from 'react';
 import './App.scss';
 
 import { Canvas } from 'react-three-fiber';
+import { useProgress } from 'drei';
+import { a, useTransition} from '@react-spring/web';
 
 import Header from './components/Header';
 import Personal from './components/Personal';
@@ -11,6 +13,25 @@ import { Copyright } from './components/Personal/Copyright';
 import state from './components/state';
 import { Lights } from './components/Lights';
 import { HTMLContent } from './components/Content';
+
+function Loader() {
+  const { active, progress } = useProgress();
+  const transition = useTransition(active, {
+    from: { opacity: 1, progress: 0 },
+    leave: { opacity: 0 },
+    update: { progress },
+  });
+  return transition(
+    ({ progress, opacity }, active) =>
+      active && (
+        <a.div className='loading' style={{ opacity }}>
+          <div className='loading-bar-container'>
+            <a.div className='loading-bar' style={{ width: progress }}></a.div>
+          </div>
+        </a.div>
+      )
+  );
+}
 
 function App() {
   const domContent = useRef();
@@ -22,14 +43,15 @@ function App() {
   return (
     <>
       <Header />
-      <Canvas colorManagement camera={{ position: [0, 0, 120], fov: 70 }}>
+      <Loader />
+      <Canvas concurrent colorManagement camera={{ position: [0, 0, 120], fov: 70 }}>
         <Lights />
         <Suspense fallback={null}>
           <HTMLContent 
             domContent={domContent} 
             modelPath={"/lamp.gltf"}
             positionY={250}
-            bgColor={'#0A1241'}
+            bgColor={'#0C1241'}
             rotateVelocity={0.002}
             meshX={0}
             meshY={-20}
@@ -41,7 +63,7 @@ function App() {
             domContent={domContent} 
             modelPath="/rose.gltf" 
             positionY={0}
-            bgColor={'#152583'}
+            bgColor={'#152563'}
             rotateVelocity={-0.005}
             meshX={20}
             meshY={-85}
@@ -54,11 +76,11 @@ function App() {
           domContent={domContent} 
           modelPath="/sphere.gltf" 
           positionY={-250}
-          bgColor={'#0A1241'}
-          rotateVelocity={0.002}
+          bgColor={'#0A1345'}
+          rotateVelocity={0.004}
           meshX={0}
           meshY={-20}
-          meshScale={[15, 15, 15]}
+          meshScale={[14, 14, 14]}
         > 
             <h1 className="title title-tech">Technologies</h1>
             <Stack />
@@ -67,13 +89,13 @@ function App() {
           domContent={domContent} 
           modelPath="/teacup.gltf" 
           positionY={-550}
-          bgColor={'#7D92E9'}
+          bgColor={'#0E1241'}
           rotateVelocity={0.002}
           meshX={110}   
           meshY={-50}
           meshScale={[4.5, 4.5, 4.5]}
         > 
-            <h1 className="title">art is a buum</h1>
+            <h1 className="title title-footer">art is an explosion</h1>
             <Copyright />
         </HTMLContent>
         </Suspense>

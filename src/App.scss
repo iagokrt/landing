@@ -8,9 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #919eed;
+  background: #0C1241;
   transition: 0.4s ease-in-out;
-
 }
 
 html,
@@ -61,6 +60,10 @@ body,
   font-size: 1.2rem;
   box-shadow: 1px 1px 3px #000;
   text-decoration: none;
+  
+  @media screen and (min-width: 600px) {
+    font-size: 2.3rem;
+  }
 }
 
 .personal {
@@ -110,6 +113,9 @@ header {
       }
     }
   }
+  @media screen and (min-width: 600px) {
+   font-size: 4.3rem;
+  }
 
   .header-inner {
     display: flex;
@@ -147,6 +153,11 @@ header {
     }
   }
 }
+.coffees {
+  @media screen and (min-width: 600px) {
+    font-size: 1rem;
+  }
+}
 
 .title {
   font-size: 10rem;
@@ -180,13 +191,16 @@ header {
   @media (max-width: 350px) {
     font-size: 2.8rem;
   }
+
+  @media screen and (min-width: 600px) {
+    font-size: 7.5rem;
+    
+  }
 }
 
-.description {
-  text-align: center;
-
-  @media (max-width: 350px) {
-    font-size: 1rem;
+.title-footer {
+  @media screen and (min-width: 600px) {
+    font-size: 6.7rem;
   }
 }
 
@@ -201,6 +215,10 @@ header {
   li {
     padding: 4px;
     font-size: 1rem;
+    
+    @media screen and (min-width: 600px) {
+    font-size: 2.4rem;
+    }
   }
 }
 
@@ -224,7 +242,7 @@ header {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: #171717;
+  background: #0C1241;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,7 +257,7 @@ header {
 
 .loading-bar {
   height: 32px;
-  background: #f15946;
+  background: #152563;
 }
 
 .socials {
@@ -293,4 +311,29 @@ div.personal aside p.profile {
 
 .copyright {
   text-align: center;
+}
+div.copyright-container {
+  @media screen and (min-width: 600px) {
+    font-size: 1.9rem;
+  
+  }
+}
+
+div.personal {
+  @media screen and (min-width: 600px) {
+    flex-direction: column;
+    margin-top: 45px;
+    
+    img {
+      margin-top: 50px;
+      width: 670px;
+      height: 670px;
+    }
+  }
+}
+
+.credits {
+  @media screen and (min-width: 600px) {
+    font-size: 2.4rem;
+  }
 }
