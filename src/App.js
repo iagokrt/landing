@@ -63,7 +63,7 @@ function App() {
             domContent={domContent} 
             modelPath="/rose.gltf" 
             positionY={0}
-            bgColor={'#152563'}
+            bgColor={'#152233'}
             rotateVelocity={-0.005}
             meshX={20}
             meshY={-85}
@@ -72,32 +72,6 @@ function App() {
               <h1 className="title title-about">About me</h1>
               <Personal />
           </HTMLContent>
-          <HTMLContent 
-          domContent={domContent} 
-          modelPath="/sphere.gltf" 
-          positionY={-250}
-          bgColor={'#0A1345'}
-          rotateVelocity={0.004}
-          meshX={0}
-          meshY={-20}
-          meshScale={[14, 14, 14]}
-        > 
-            <h1 className="title title-tech">Technologies</h1>
-            <Stack />
-        </HTMLContent>
-          <HTMLContent 
-          domContent={domContent} 
-          modelPath="/teacup.gltf" 
-          positionY={-550}
-          bgColor={'#0E1241'}
-          rotateVelocity={0.002}
-          meshX={110}   
-          meshY={-50}
-          meshScale={[4.5, 4.5, 4.5]}
-        > 
-            <h1 className="title title-footer">art is an explosion</h1>
-            <Copyright />
-        </HTMLContent>
         </Suspense>
       </Canvas>
       <div className="scrollArea" ref={scrollArea} onScroll={onScroll} >

@@ -16,7 +16,6 @@ export default function Personal() {
         <Socials />
       </div>
     </aside>
-    <img src={'/picture.jpg'} alt="me in landscape" />
   </div>
   )
 }
