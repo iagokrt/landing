@@ -1,28 +1,35 @@
 import React from 'react'
 
+import { CgPokemon, CgRead, CgGames, CgGhost, CgAlarm } from 'react-icons/cg'
+import { GiKnockout } from 'react-icons/gi'
+
+import { BiGame } from 'react-icons/bi'
+
 import Socials from './Socials'
 
 const templateLocales = {
-  thankYouLabel: 'with ❤',
-  designLabel: 'Designed by @iagokrt'
+  footerLabel: 'Designed by @iagokrt'
 }
 
 const data = {
-  katrin: 'https://sketchfab.com/katrin.701',
-  github: 'https://github.com/iagokrt'
+  katrin: 'https://sketchfab.com/katrin.701'
 }
 
 const Personal = () => {
   return (
     <>
       <h4>
-        <a target="_blank" rel="noopener noreferrer" href={data.github}>
-          {templateLocales.thankYouLabel}
-        </a>
+        I'm a software developer, frontend designer and former visual
+        communications designer that loves storytelling concepts and creative
+        coding...
+      </h4>
+      <h4>
+        I'm currently on 4 Semester on contents related to: C, JavaScript,
+        Threejs, WebGL, Node.js Servers, GLSL Shaders, Git.
       </h4>
       <Socials />
-      <a target="_blank" rel="noopener noreferrer" href={data.github}>
-        {templateLocales.designLabel}
+      <a id="footer" href="https://twitter.com/iagokrt">
+        {templateLocales.footerLabel}
       </a>
     </>
   )
