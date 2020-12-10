@@ -6,10 +6,15 @@
   button {
     color: #000111;
     background: #fff;
-    padding: 12px 16px;
+    padding: 8px 13px;
     border-radius: 10px;
     box-shadow: 1px 1px 1px #f1f1f1;
     border: none;
     outline: none;
+    transition: all 0.1s linear;
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }

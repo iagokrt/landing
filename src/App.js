@@ -47,15 +47,28 @@ function App() {
           </HTMLContent>
           <HTMLContent
             domContent={domContent}
-            modelPath="/sphere.gltf"
+            modelPath="/rose.gltf"
             positionY={0}
-            bgColor={'#152233'}
+            bgColor={'#001233'}
+            rotateVelocity={-0.005}
+            meshX={20}
+            meshY={5}
+            meshZ={22}
+            meshScale={[12, 12, 12]}
+          >
+            <h1>About You</h1>
+          </HTMLContent>
+          <HTMLContent
+            domContent={domContent}
+            modelPath="/sphere.gltf"
+            positionY={-250}
+            bgColor={'#023E7D'}
             rotateVelocity={-0.005}
             meshX={20}
             meshY={45}
             meshScale={[1.5, 1.5, 1.5]}
           >
-            <h1>About me</h1>
+            <h1>About Me</h1>
             <Personal />
           </HTMLContent>
         </Suspense>

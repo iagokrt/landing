@@ -29,6 +29,27 @@ a {
   text-align: center;
 }
 
+/* custom designed scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 6.6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($color: #f1f1f1, $alpha: 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .scrollArea {
   position: absolute;
   top: 0;
@@ -55,6 +76,7 @@ a {
     color: #f1f1f1;
     line-height: 44px;
     letter-spacing: 0.5rem;
+    padding: 5px 8px;
   }
 }
 
@@ -94,9 +116,42 @@ header {
 
 article#socials-icons-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   a {
     margin: 5px;
   }
+}
+
+.wrapper-blog {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 2vh;
+  right: 0vh;
+  padding-right: 15px;
+
+  button {
+    border: 1px solid #f1f1f1;
+    background-color: transparent;
+    padding: 12px 16px;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.1s linear;
+
+    &:hover {
+      background-color: #000111;
+      transform: scale(1.02);
+    }
+
+    a {
+      color: #f1f1f1;
+    }
+  }
+}
+
+a#footer {
+  margin-top: 21px;
 }
