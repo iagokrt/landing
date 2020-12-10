@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Lights() {
+export default function Lights() {
   return (
     <>
       <ambientLight intensity={0.3} />
