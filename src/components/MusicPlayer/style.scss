@@ -1,16 +1,15 @@
 .wrapper {
   position: absolute;
-  top: -1vh;
-  left: 0;
+  top: 1vh;
+  left: 1vh;
 
   button {
     color: #000111;
-    background: #FFF;
-    padding: 12px 30px;
+    background: #fff;
+    padding: 12px 16px;
     border-radius: 10px;
+    box-shadow: 1px 1px 1px #f1f1f1;
     border: none;
     outline: none;
   }
-  
-  
 }
